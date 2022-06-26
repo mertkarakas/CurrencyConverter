@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "currencyconversionapi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mertkarakas/CurrencyConversionAPI",
+      "state" : {
+        "revision" : "82b3d43de72ce0650c9a4b88feeba351662bc6ac",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

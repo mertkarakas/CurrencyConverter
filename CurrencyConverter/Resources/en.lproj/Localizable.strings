@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  CurrencyConverter
+
+  Created by Mert Karakas on 24.06.2022.
+  
+*/
+
+"error" = "Error!";
+"ok" = "OK";
+"done" = "Done";
+"my_balances" = "MY BALANCES";
+"currency_exchange" = "CURRENCY EXCHANGE";
+"sell" = "Sell";
+"receive" = "Receive";
+"submit" = "CONVERT";
+"insufficient_balance" = "Insufficient Balance";
+"converted_message" = "You have converted %@ to %@. Commission Fee - %@.";

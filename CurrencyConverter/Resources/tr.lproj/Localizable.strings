@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  CurrencyConverter
+
+  Created by Mert Karakas on 24.06.2022.
+  
+*/
+
+"error" = "Hata!";
+"ok" = "Tamam";
+"done" = "Bitti";
+"my_balances" = "BAKİYELERİM";
+"currency_exchange" = "DÖVİZ İŞLEMLERİ";
+"sell" = "Sat";
+"receive" = "Al";
+"submit" = "ÇEVİR";
+"insufficient_balance" = "Yetersiz Bakiye!";
+"converted_message" = "You have converted %@ to %@. Commission Fee - %@.";
