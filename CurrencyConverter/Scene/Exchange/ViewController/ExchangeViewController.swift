@@ -272,12 +272,17 @@ private extension ExchangeViewController {
         viewModel.submit()
     }
 
-    @objc func keyboardShown() {
+    @objc func keyboardShown(_ notification: Notification) {
         submitButton.isEnabled = false
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+            return
+        }
+        scrollView.contentInset.bottom = view.convert(keyboardFrame.cgRectValue, from: nil).size.height
     }
 
     @objc func keyboardWillHide() {
         submitButton.isEnabled = viewModel.shouldButtonEnable()
+        scrollView.contentInset.bottom = 0
     }
 
     @objc func viewTapped() {
