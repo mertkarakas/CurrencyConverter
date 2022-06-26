@@ -223,6 +223,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E78C69E128691D6C002BEFBD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E738E042286671B00087B4B6 /* CustomTextFieldPresenter.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		E79A8C1828664A57008E51C4 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +282,7 @@
 		E79A8C312866511D008E51C4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				E738E042286671B00087B4B6 /* CustomTextFieldPresenter.swift */,
+				E78C69E128691D6C002BEFBD /* Common */,
 				E79A8C32286651AE008E51C4 /* Components */,
 				E79A8C352866561F008E51C4 /* Extensions */,
 			);
