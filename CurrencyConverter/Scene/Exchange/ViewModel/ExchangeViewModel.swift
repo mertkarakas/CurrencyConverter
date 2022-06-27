@@ -185,7 +185,12 @@ extension ExchangeViewModel {
         }
 
         guard balanceAmountToSell >= sellAmountWithCommision else {
-            self.notifyController(.showAlert(title: "error".localized(), message: "insufficient_balance".localized()))
+            notifyController(.showAlert(
+                title: "error".localized(),
+                message: String(format: "insufficient_balance".localized(),
+                    sellAmountWithCommision.formatted(currencySymbol: sellCurrency.description),
+                    sellAmountWithCommision.subtracting(sellAmount).formatted(currencySymbol: sellCurrency.description)
+                )))
             return
         }
 

@@ -14,5 +14,5 @@
 "sell" = "Sat";
 "receive" = "Al";
 "submit" = "ÇEVİR";
-"insufficient_balance" = "Yetersiz Bakiye!";
+"insufficient_balance" = "Yetersiz Bakiye.\nOlması gereken tutar: %@, komisyon ücreti: %@";
 "converted_message" = "You have converted %@ to %@. Commission Fee - %@.";

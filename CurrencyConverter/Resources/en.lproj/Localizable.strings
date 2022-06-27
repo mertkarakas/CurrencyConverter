@@ -14,5 +14,5 @@
 "sell" = "Sell";
 "receive" = "Receive";
 "submit" = "CONVERT";
-"insufficient_balance" = "Insufficient Balance";
+"insufficient_balance" = "Insufficient Balance.\nExpected total amount: %@ with commision of %@";
 "converted_message" = "You have converted %@ to %@. Commission Fee - %@.";
