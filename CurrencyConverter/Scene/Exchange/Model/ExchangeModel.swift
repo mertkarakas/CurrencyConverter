@@ -11,6 +11,7 @@ import UIKit
 
 struct Account: Codable {
     var balances: [Balance]
+    var successfulTransactionCount: Int
     
     static var currentAccount: Account? {
         guard let data = UserDefaults.accountModel as? Data,
@@ -66,6 +67,8 @@ extension Account {
                 Balance(balanceId: UUID(), amount: 0, currency: .usd, bgColor: .green),
                 Balance(balanceId: UUID(), amount: 0, currency: .jpy, bgColor: .red),
                 Balance(balanceId: UUID(), amount: 1000, currency: .eur, bgColor: .blue),
-            ])
+            ],
+            successfulTransactionCount: 0
+        )
     }
 }

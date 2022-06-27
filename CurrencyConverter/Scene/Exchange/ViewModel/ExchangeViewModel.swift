@@ -54,8 +54,6 @@ final class ExchangeViewModel: ExchangeViewModelProtocol {
         }
     }
 
-    private var successfulTransactionCount = UserDefaults.transactionCount ?? 0
-
     // TODO: - Dummy Account model
     private(set) var account: Account = .currentAccount ?? .buildMockAccount()
 
@@ -199,10 +197,8 @@ extension ExchangeViewModel {
 
         account.balances[sellBalanceIndex].amount = balanceAmountToSell
         account.balances[receiveBalanceIndex].amount = balanceAmountToReceive
+        account.successfulTransactionCount += 1
         account.saveAccount()
-
-        successfulTransactionCount += 1
-        UserDefaults.transactionCount = successfulTransactionCount
 
         notifyController(.accountUpdated)
         notifyController(.showAlert(
@@ -231,11 +227,11 @@ private extension ExchangeViewModel {
         for rule in commissionRules {
             switch rule {
             case .everyNTransaction(let n):
-                if (successfulTransactionCount + 1) % n == 0 {
+                if (account.successfulTransactionCount + 1) % n == 0 {
                     return false
                 }
             case .firstNTransaction(let n):
-                if (successfulTransactionCount + 1) <= n {
+                if (account.successfulTransactionCount + 1) <= n {
                     return false
                 }
             }
