@@ -1,4 +1,4 @@
-# Currency Converter
+# Currency Converter v1.0
 
 Technical Overview
 
